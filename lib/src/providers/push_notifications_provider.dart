@@ -24,6 +24,8 @@ class PushNotificationProvider{
       print(token);
       //Token del dispositivo
       // fI1mvTrYk04:APA91bEfY_6uVYUAu461GQXg-SKB-8Se7E1Y6AI5UKQ6PnQdSXN05GHPRlx1hPd74sLRE_dXx5XlWFftBHlI3peP4UXPTKvI6BQJG5PXS32lNOaRpKCYnV_nQmNomaRtknvhr6zkkNKP
+    
+      // cBv4W1Cjug8:APA91bGB3GazyviLrPIcHBY4s4N1pgIXZLJe1uLIcITOipeSQ4ZEhj0b99tm4LPJDx1GAwZseZhmqKO1M_rVIeIyEKvDH201s_vH9ncf2zsBMuP1NElF_l7Es3E_m9TooYFAkZGR8Yvw
     });
 
     //Se configura los métodos o pasos para las push notifications
@@ -51,6 +53,7 @@ class PushNotificationProvider{
         //Se obtiene el valor de la clave que trae la data
         final noti = info['data']['comida'];
         print(noti);
+        _mensajesStreamController.sink.add(noti);
       }
     );
   }
